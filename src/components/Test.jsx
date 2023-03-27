@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import Star from "../images/icon-star.svg";
-
+import ThankYou from "./ThankYou.jsx"
 
 function Test() {
 
@@ -23,10 +24,14 @@ function Test() {
       <li class="BorderCircle">5</li>
     </ul>
 
-    <button  type="submit">SUMBIT </button>
+    <Link to="/ThankYou"> 
+      <button  type="submit"> SUMBIT </button>
+    </Link>
     </div>
    </div>
    </div>
+
+
   );
 }
 
