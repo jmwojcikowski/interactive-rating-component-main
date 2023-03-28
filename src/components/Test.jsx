@@ -3,16 +3,31 @@ import { Link } from 'react-router-dom';
 import Star from "../images/icon-star.svg";
 
 
-
-
 function Test() {
   
-    const [isActive, setIsActive]= useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleClick = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+    
+  };
+
   
-    const toggleClass= () => {
-      setIsActive(!isActive);
-    }
-  
+   const renderListItems = () => {
+    const items = ['1', '2', '3', '4', '5'];
+    
+    return items.map((item, index) => (
+      
+      <li
+        key={index}
+        className={index === activeIndex ? 'active BorderCircle' : 'BorderCircle'}
+        onClick={() => handleClick(index)}
+      >
+        {item}
+      </li>
+    ));
+  };
+
   return (
    <div>
     <div id="container">
@@ -24,13 +39,8 @@ function Test() {
    support request. All feedback is appreciated
     to help is improve our offering!</p>
 
-    <ul>
-      <li class={`BorderCircle ${isActive ? 'active' : ''} ${isActive && 'second-class'}`} onClick={toggleClass}>1</li>
-      <li class="BorderCircle">2</li>
-      <li class="BorderCircle">3</li>
-      <li class="BorderCircle">4</li>
-      <li class="BorderCircle">5</li>
-    </ul>
+
+    <ul>{renderListItems()}</ul>
 
     <Link to="/ThankYou"> 
       <button  type="submit"> SUBMIT </button>
