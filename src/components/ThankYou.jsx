@@ -6,12 +6,15 @@ function ThankYou() {
   return (
    <div>
     <div id="container">
-    <div id="mainDiv">
+    <div class="mainDiv center">
      
-      <img id="IlustrationThankYou" class="BorderCircle" src={IlustrationThankYou} alt="description"></img>
-<p>You selected rate out of 5</p>
+      <img id="IlustrationThankYou" src={IlustrationThankYou} alt="description"></img>
+  <div class="showRating">
+    <p>You selected rate out of 5</p>
+  </div>
+  
 <h3>Thank You!</h3>
-<p>We appreciate you taking the time to give a 
+<p class="TextP">We appreciate you taking the time to give a 
     rating. If you ever need more support, don't 
     hesitate to get in touch!</p>
 
