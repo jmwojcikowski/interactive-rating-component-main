@@ -15,10 +15,7 @@ function Test(props) {
    support request. All feedback is appreciated
     to help is improve our offering!</p>
 
-
     <ul>{props.renderListItems()}</ul>
-
-    
 
     <Link to="/ThankYou"> 
       <button  type="button"> SUBMIT </button>
@@ -26,8 +23,6 @@ function Test(props) {
     </div>
    </div>
    </div>
-
-
   );
 }
 
