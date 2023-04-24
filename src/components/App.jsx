@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -30,12 +30,12 @@ function App() {
     ));
   };
     return (
-      <BrowserRouter>    
+      <HashRouter>    
     <Routes>
      <Route path="/" element={<Test renderListItems={renderListItems}/>}/>
      <Route path="/ThankYou" element={<ThankYou selectedItem={selectedItem} />}/>
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
     );}
   
   export default App;
